@@ -1,6 +1,6 @@
 {
     "name" : "jscron",
-    "version" : "0.0.3",
+    "version" : "0.0.4",
     "description" : "Cron Format Parser And Schedule Dates Generator",
     "main" : "./index.js",
     "keywords" : [

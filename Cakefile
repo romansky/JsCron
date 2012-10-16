@@ -1,8 +1,11 @@
 {exec} = require 'child_process'
 
 handleExecErrors = (err, stdout, stderr)->
-        console.log err if err
-        console.log 'Messages: ' + stdout + stderr if err || stdout
+        if err then console.log 'Errors: '+err
+        if stdout then console.log 'Messages: '+stdout
+        if stderr then console.log 'Errors: '+stderr
+        if err then process.exit 1
+
 
 task 'build',->
 	exec "coffee -c index", handleExecErrors
