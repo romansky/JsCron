@@ -26,36 +26,36 @@ describe "JsCron",->
 
 		it "ignores a date range that is outside of allowed month",->
 			cron = "0 0 0 1 1 *"
-			startTime = Date.parse("Feb 1, 2012")
-			endTime = Date.parse("March 1, 2012")
+			startTime = Date.UTC(2012,1,1)
+			endTime = Date.UTC(2012,2,1)
 			res = jscron.parse(cron, startTime, endTime)
 			expect(res.length).toEqual(0)
 
 
 		it "returns date ranges per hour",->
 			cron = "0 0 * * * *"
-			startTime = Date.parse("01:00 Feb 1, 2012")
-			endTime = Date.parse("01:00 Feb 2, 2012")
+			startTime = Date.UTC(2012,1,1,1)
+			endTime = Date.UTC(2012,1,2,1)
 			res = jscron.parse(cron, startTime, endTime)
 			expect(res.length).toEqual(24)
 
 
 		it "handles the days correctly",->
 			cron = "0 0 0 1 * *"
-			startTime = Date.parse("Jan 1, 2000")
-			endTime = Date.parse("Jan 1, 2012")
+			startTime = Date.UTC(2000,0,1)
+			endTime = Date.UTC(2012,0,1)
 			expect(jscron.parse(cron,startTime, endTime).length).toEqual(12*12)
 
 		it "handles months correctly",->
 			cron = "0 0 0 1 1 *"
-			startTime = Date.parse("Jan 1, 2000")
-			endTime = Date.parse("Jan 1, 2012")
+			startTime = Date.UTC(2000,0,1)
+			endTime = Date.UTC(2012,0,1)
 			expect(jscron.parse(cron,startTime, endTime).length).toEqual(12)
 
 		it "handles days of week correctly",->
 			cron = "0 0 0 * * 0"
-			startTime = Date.parse("Oct 1, 2012")
-			endTime = Date.parse("Oct 31, 2012")
+			startTime = Date.UTC(2012,9,1)
+			endTime = Date.UTC(2012,9,31)
 			expect(jscron.parse(cron,startTime, endTime).length).toEqual(4)
 
 
