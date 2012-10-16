@@ -1,0 +1,28 @@
+{
+    "name" : "jscron",
+    "version" : "0.0.1",
+    "description" : "Cron Format Parser And Schedule Dates Generator",
+    "main" : "./index.js",
+    "keywords" : [
+        "cron", "schedule","scheduled","unix"
+    ],
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/romansky/JsCron"
+    },
+    "dependencies" : {
+	"node-logr" : ">= 0.0.3"
+    },
+    "devDependencies" : {
+	"jasmine-node": ">= 1.0.26"
+    },
+    "scripts" : {},
+    "engine" : {"node" : ">=0.4.0"},
+    "author" : {
+        "name" : "Roman Landenband",
+        "email" : "roman.land@gmail.com",
+        "url" : "www.romansky.me"
+    }
+}
+
+
