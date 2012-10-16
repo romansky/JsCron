@@ -16,7 +16,9 @@
     "devDependencies" : {
 	"jasmine-node": ">= 1.0.26"
     },
-    "scripts" : {},
+    "scripts" : {
+        "test": "cake test"
+    },
     "engine" : {"node" : ">=0.4.0"},
     "author" : {
         "name" : "Roman Landenband",
