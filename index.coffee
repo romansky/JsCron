@@ -39,8 +39,8 @@ exports.jscron = class jscron
 			if zDay.getUTCDate() not in days then continue
 			if zDay.getUTCMonth()+1 not in months then continue
 			if zDay.getUTCDay() not in dows then continue
-			isStartDay = zDay.getUTCDate() == startTimeDate.getUTCDate()
-			isEndDay = zDay.getUTCDate() == endTimeDate.getUTCDate()
+			isStartDay = daysSinceEpoch(zDay) == daysSinceEpoch(startTimeDate)
+			isEndDay = daysSinceEpoch(zDay) == daysSinceEpoch(endTimeDate)
 			zDayHours = hours
 			if isStartDay then zDayHours = zDayHours.filter((h)-> h >= startTimeDate.getUTCHours())
 			if isEndDay then zDayHours = zDayHours.filter((h)-> h <= endTimeDate.getUTCHours())

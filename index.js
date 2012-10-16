@@ -64,8 +64,8 @@
         if (_ref3 = zDay.getUTCDay(), __indexOf.call(dows, _ref3) < 0) {
           continue;
         }
-        isStartDay = zDay.getUTCDate() === startTimeDate.getUTCDate();
-        isEndDay = zDay.getUTCDate() === endTimeDate.getUTCDate();
+        isStartDay = daysSinceEpoch(zDay) === daysSinceEpoch(startTimeDate);
+        isEndDay = daysSinceEpoch(zDay) === daysSinceEpoch(endTimeDate);
         zDayHours = hours;
         if (isStartDay) {
           zDayHours = zDayHours.filter(function(h) {
