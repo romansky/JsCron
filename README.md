@@ -1,4 +1,4 @@
-JsCron [![Build Status](https://travis-ci.org/romansky/backbone-typed.png)](https://travis-ci.org/romansky/backbone-typed)
+JsCron [![Build Status](https://travis-ci.org/romansky/JsCron.png)](https://travis-ci.org/romansky/JsCron)
 ======
 
 Javascript cron parser, schedule date generator
