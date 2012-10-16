@@ -13,8 +13,8 @@ Javascript cron parser, schedule date generator
 	res = require('jscron').jscron.parse(cron,startTime,endTime) 
 	console.log(res)
 	#> [1350397740000,1350397800000,1350397860000,1350397920000,1350397980000]
-	/* The above in the first second for the next five minutes
-	res.forEach(function(i){ console.log new Date(i) })
+	/* The above in the first second for the next five minutes */
+	res.forEach(function(i){ console.log(new Date(i))})
 	#> Tue Oct 16 2012 16:29:00 GMT+0200 (IST)
 	#> Tue Oct 16 2012 16:30:00 GMT+0200 (IST)
 	#> Tue Oct 16 2012 16:31:00 GMT+0200 (IST)
@@ -26,8 +26,6 @@ Javascript cron parser, schedule date generator
 
 ### General Format
 
-	Cron Format
-	-----------
 	*	*	*	*	*	*
 	|	|	|	|	|	|day of week(0-6)
 	|	|	|	|	|month(1-12)
