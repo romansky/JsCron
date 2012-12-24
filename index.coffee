@@ -68,6 +68,11 @@ exports.jscron = class jscron
 						# debug
 						# console.log new Date(cronTimes[cronTimes.length-1])
 		return cronTimes
+
+
+	@timeToCron : (time)->
+		date = new Date(time)
+		"#{date.getUTCSeconds()} #{date.getUTCMinutes()} #{date.getUTCHours()} #{date.getUTCDate()} #{date.getUTCMonth()+1} *"
 		
 
 	@_findOptions : (cron)->

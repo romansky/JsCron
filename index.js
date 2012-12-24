@@ -117,6 +117,12 @@
       return cronTimes;
     };
 
+    jscron.timeToCron = function(time) {
+      var date;
+      date = new Date(time);
+      return "" + (date.getUTCSeconds()) + " " + (date.getUTCMinutes()) + " " + (date.getUTCHours()) + " " + (date.getUTCDate()) + " " + (date.getUTCMonth() + 1) + " *";
+    };
+
     jscron._findOptions = function(cron) {
       var allowedNum, dayOfMonth, dayOfWeek, finish, hours, minutes, month, p, param, range, rangeRes, res, seconds, start, step, values, x, _i, _j, _k, _l, _len, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _results, _results1, _results2;
       if (cron.split(" ").length < 6) {

@@ -58,4 +58,9 @@ describe "JsCron",->
 			endTime = Date.UTC(2012,9,31)
 			expect(jscron.parse(cron,startTime, endTime).length).toEqual(4)
 
+		it "can generate cron formatted string for given time",->
+			givenTime = Date.UTC(2012,9,1,12,11,10)
+			expectedCron = "10 11 12 1 10 *"
+			expect(jscron.timeToCron(givenTime)).toEqual(expectedCron)
+
 
