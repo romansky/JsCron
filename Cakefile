@@ -8,7 +8,7 @@ handleExecErrors = (err, stdout, stderr)->
 
 
 task 'build',->
-	exec "coffee -c index", handleExecErrors
+	exec "coffee -c index.coffee", handleExecErrors
 
 task 'test',->
 	exec "node_modules/jasmine-node/bin/jasmine-node --verbose --color --coffee ./specs" , handleExecErrors

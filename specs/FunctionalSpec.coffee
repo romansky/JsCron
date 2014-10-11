@@ -21,7 +21,23 @@ describe "JsCron",->
 			cron = "* * * * * *"
 			startTime = Date.now()
 			endTime = Date.now() + ( 60 * 60 * 1000 )
-			res = jscron.parse(cron, startTime, endTime) 	
+			res = jscron.parse(cron, startTime, endTime)
+			expect(res.length).toEqual( 60 * 60 )
+
+		it "gets all seconds for full hour overnight", ->
+			cron = "* * * * * *"
+			startTime = new Date(new Date().getFullYear(),6,12,23,12).getTime()
+			endTime = startTime + ( 60 * 60 * 1000 )
+			console.log startTime, endTime
+			res = jscron.parse(cron, startTime, endTime)
+			expect(res.length).toEqual( 60 * 60 )
+
+		it "gets all seconds for full hour morning", ->
+			cron = "* * * * * *"
+			startTime = new Date(new Date().getFullYear(),6,13,1,1).getTime()
+			endTime = startTime + ( 60 * 60 * 1000 )
+			console.log startTime, endTime
+			res = jscron.parse(cron, startTime, endTime)
 			expect(res.length).toEqual( 60 * 60 )
 
 		it "ignores a date range that is outside of allowed month",->
