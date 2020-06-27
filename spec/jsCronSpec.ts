@@ -1,5 +1,5 @@
 import "jasmine";
-import {jscron} from "../";
+import {jscron} from "../src";
 
 describe("JsCron", function () {
 
