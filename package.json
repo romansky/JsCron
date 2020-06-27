@@ -1,31 +1,42 @@
 {
-    "name" : "jscron",
-    "version" : "0.0.5",
-    "description" : "Cron Format Parser And Schedule Dates Generator",
-    "main" : "./index.js",
-    "keywords" : [
-        "cron", "schedule","scheduled","unix"
-    ],
-    "repository" : {
-        "type" : "git",
-        "url" : "https://github.com/romansky/JsCron"
-    },
-    "dependencies" : {
-	"node-logr" : ">= 0.0.3"
-    },
-    "devDependencies" : {
-	"jasmine-node": ">= 1.0.26",
-	"coffee-script": "latest"
-    },
-    "scripts" : {
-        "test": "cake test"
-    },
-    "engine" : {"node" : ">=0.4.0"},
-    "author" : {
-        "name" : "Roman Landenband",
-        "email" : "roman.land@gmail.com",
-        "url" : "www.romansky.me"
-    }
+  "name": "jscron",
+  "version": "0.1.0",
+  "description": "Cron Format Parser And Schedule Dates Generator",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cron",
+    "schedule",
+    "scheduled",
+    "unix"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romansky/JsCron"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^3.5.11",
+    "coffee-script": "latest",
+    "jasmine": "^3.5.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "yarn build",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json"
+  },
+  "engine": {
+    "node": ">=0.4.0"
+  },
+  "author": {
+    "name": "Roman Landenband",
+    "email": "roman.land@gmail.com",
+    "url": "www.romansky.me"
+  }
 }
-
-
