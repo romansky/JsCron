@@ -1,12 +1,9 @@
 {
   "name": "jscron",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Cron Format Parser And Schedule Dates Generator",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "keywords": [
     "cron",
