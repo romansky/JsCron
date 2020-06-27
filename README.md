@@ -3,6 +3,8 @@ JsCron [![Build Status](https://travis-ci.org/romansky/JsCron.png)](https://trav
 
 Javascript cron parser, schedule date generator
 
+### Scala version can be found [here](https://github.com/romansky/scron)
+
 ## Usage
 	
 
